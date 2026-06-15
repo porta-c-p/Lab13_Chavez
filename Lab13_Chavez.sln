@@ -10,6 +10,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab13_Chavez.Domain", "Lab1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab13_Chavez.Infrastructure", "Lab13_Chavez.Infrastructure\Lab13_Chavez.Infrastructure.csproj", "{00E60617-7C0F-478E-8B7B-A27F6765815F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{EF1061D2-519E-4A24-964A-0CFFD1311364}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{2EF4033A-49B4-4EC9-A32A-F0A6B0711D62}"
+	ProjectSection(SolutionItems) = preProject
+		dotnet.yml = dotnet.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,5 +90,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2EF4033A-49B4-4EC9-A32A-F0A6B0711D62} = {EF1061D2-519E-4A24-964A-0CFFD1311364}
 	EndGlobalSection
 EndGlobal

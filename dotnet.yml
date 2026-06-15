@@ -1,0 +1,31 @@
+﻿name: Build and Deploy .NET Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore Lab13_Chavez.sln
+
+      - name: Build application
+        run: dotnet build Lab13_Chavez.sln --configuration Release --no-restore
+
+      - name: Publish application
+        run: dotnet publish Lab13_Chavez.Api/Lab13_Chavez.Api.csproj --configuration Release --output ./published
+
+      - name: Show published files
+        run: ls -la ./published
