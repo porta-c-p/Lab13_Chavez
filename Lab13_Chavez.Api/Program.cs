@@ -18,12 +18,12 @@ builder.Services.AddInfrastructureServices(builder.Configuration);
 
 var app = builder.Build();
 
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
+
+app.MapGet("/", () => "Lab13_Chavez API desplegada correctamente en Render");
 
 app.MapControllers();
 
