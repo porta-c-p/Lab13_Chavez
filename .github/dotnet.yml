@@ -1,4 +1,4 @@
-name: Build and Deploy .NET Application
+﻿name: Build and Deploy .NET Application
 
 on:
   push:
